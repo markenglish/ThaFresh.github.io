@@ -12,4 +12,4 @@ var t;function e(t){return(e="function"==typeof Symbol&&"symbol"==typeof Symbol.
 },{}],"d6sW":[function(require,module,exports) {
 "use strict";var e=r(require("jquery"));function r(e){return e&&e.__esModule?e:{default:e}}globalThis.jQuery=e.default;var t=require("/src/BeerSlider.js");e.default.fn.BeerSlider=function(e){return e=e||{},this.each(function(){new t(this,e)})},(0,e.default)(".beer-slider").each(function(r,t){(0,e.default)(t).BeerSlider({start:(0,e.default)(t).data("beer-start")})});
 },{"jquery":"HlZQ","/src/BeerSlider.js":"s6gO"}]},{},["d6sW"], null)
-//# sourceMappingURL=/main.1b807e76.js.map
+//# sourceMappingURL=aha/dist/main.1b807e76.js.map
