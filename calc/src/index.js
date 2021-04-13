@@ -1,34 +1,12 @@
 import "bootstrap";
 import $ from "jquery";
-
-const Calculator = require("@mroutput/jscalc");
-var c = new Calculator();
-var clr = false;
-var lastchar;
+import "alpinejs";
 
 // JQuery
 $(document).ready(() => {
-  var display = $("#display");
+  var inputLst = ["followersFB", "followersInsta", "followersLI", "associated", "associatedLeader", "associatedFollowers", "perceivedQuality", "customerContact", "potential", "loyalty"];
 
-  $(".btn").on("click", function (event) {
-    var val = $(event.currentTarget).data("val");
-
-    if (val == "+") {
-      val = " + ";
-    }
-
-    if (val == "=") {
-      var ans = c.exec(display.val());
-      display.val(ans);
-      clr = true;
-      return;
-    }
-
-    if (clr) {
-      display.val(val);
-      clr = false;
-    } else {
-      display.val(display.val() + val);
-    }
+  inputLst.forEach((fn) => {
+    console.log(fn);
   });
 });

@@ -25,6 +25,7 @@
   "dependencies": {
     "@babel/runtime": "^7.6.3",
     "@mroutput/jscalc": "^1.0.5",
+    "alpinejs": "^2.8.2",
     "bootstrap": "^4.3.1",
     "jquery": "^3.4.1",
     "popper.js": "^1.15.0"

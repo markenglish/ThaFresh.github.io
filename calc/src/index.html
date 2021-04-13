@@ -4,37 +4,148 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Parcel BoilerPlate</title>
-    <!-- scss file will be replaced with bundled css -->
+    <title></title>
+
     <link href="sass/main.scss" rel="stylesheet" />
   </head>
 
   <body>
     <main id="main" class="container">
-      <div class="row pt-20">
-        <div class="col text-center">
-          <input type="text" id="display" style="width: 100%" />
+      <div class="card">
+        <div class="card-header">Brand Equity Calculator</div>
+        <div class="card-body">
+          <h5 class="card-title">Brand Awareness</h5>
+
+          <label for="followersFB">How many Facebook Followers do you have?</label>
+          <input x-model.number="followersFB" type="number" class="form-control" name="followersFB" id="followersFB" placeholder="enter number" />
+
+          <label for="followersInsta">How many Instagram Followers do you have?</label>
+          <input type="number" class="form-control" name="followersInsta" id="followersInsta" placeholder="enter number" />
+
+          <label for="followersLI">How many LinkedIn Followers do you have?</label>
+          <input type="number" class="form-control" name="followersLI" id="followersLI" placeholder="enter number" />
         </div>
-      </div>
-      <div class="row pt-20">
-        <div class="col text-center"><button type="button" class="btn btn-primary" data-val="7">7</button></div>
-        <div class="col text-center"><button type="button" class="btn btn-primary" data-val="8">8</button></div>
-        <div class="col text-center"><button type="button" class="btn btn-primary" data-val="9">9</button></div>
-      </div>
-      <div class="row pt-20">
-        <div class="col text-center"><button type="button" class="btn btn-primary" data-val="4">4</button></div>
-        <div class="col text-center"><button type="button" class="btn btn-primary" data-val="5">5</button></div>
-        <div class="col text-center"><button type="button" class="btn btn-primary" data-val="6">6</button></div>
-      </div>
-      <div class="row pt-20">
-        <div class="col text-center"><button type="button" class="btn btn-primary" data-val="1">1</button></div>
-        <div class="col text-center"><button type="button" class="btn btn-primary" data-val="2">2</button></div>
-        <div class="col text-center"><button type="button" class="btn btn-primary" data-val="3">3</button></div>
-      </div>
-      <div class="row pt-20">
-        <div class="col text-center"><button type="button" class="btn btn-primary" data-val="0">0</button></div>
-        <div class="col text-center"><button type="button" class="btn btn-primary" data-val="=">=</button></div>
-        <div class="col text-center"><button type="button" class="btn btn-primary" data-val="+">+</button></div>
+
+        <hr class="mx-4" />
+
+        <div class="card-body">
+          <h5 class="card-title">Brand Association</h5>
+
+          <label for="associated">Which business(es) are you associated with?</label>
+          <textarea class="form-control" name="associated" id="associated" placeholder="Your text here" rows="4"></textarea>
+
+          <label for="associatedLeader">Which one is the leader/premium business?</label>
+          <input type="text" class="form-control" name="associatedLeader" id="associatedLeader" placeholder="Your text here" />
+
+          <label for="associatedFollowers">Collectively, how many followers do they have?</label>
+          <input type="number" class="form-control" name="associatedFollowers" id="associatedFollowers" placeholder="enter number" />
+        </div>
+
+        <hr class="mx-4" />
+
+        <div class="card-body">
+          <h5 class="card-title">Perceived Quality</h5>
+
+          <label for="perceivedQuality">How does your customer see your products/services?</label>
+          <br />
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="perceivedQuality" id="perceivedQuality1" value="1" />
+            <label class="form-check-label" for="perceivedQuality">below average</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="perceivedQuality" id="perceivedQuality2" value="2" />
+            <label class="form-check-label" for="perceivedQuality">budget</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="perceivedQuality" id="perceivedQuality3" value="3" />
+            <label class="form-check-label" for="perceivedQuality">above average</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="perceivedQuality" id="perceivedQuality4" value="4" />
+            <label class="form-check-label" for="perceivedQuality">high end</label>
+          </div>
+        </div>
+
+        <hr class="mx-4" />
+
+        <div class="card-body">
+          <h5 class="card-title">Brand Experience</h5>
+
+          <label for="customerContact">When a customer contacts you, are they generally:</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="customerContact" id="customerContact1" value="1" />
+            <label class="form-check-label" for="customerContact2">contacting you to praise the service/product</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="customerContact" id="customerContact2" value="2" />
+            <label class="form-check-label" for="customerContact2">complaining that they are not getting the service/product they bought</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="customerContact" id="customerContact3" value="3" />
+            <label class="form-check-label" for="customerContact3">confused on how to utilise the product/service</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="customerContact" id="customerContact4" value="4" />
+            <label class="form-check-label" for="customerContact4">they never contact</label>
+          </div>
+        </div>
+
+        <hr class="mx-4" />
+
+        <div class="card-body">
+          <h5 class="card-title">Brand Preference</h5>
+
+          <label for="potential">Generally, when a potential customer goes to buy your product/service do they:</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="potential" id="potential1" value="1" />
+            <label class="form-check-label" for="potential1">Go with another supplier</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="potential" id="potential2" value="2" />
+            <label class="form-check-label" for="potential2">Select your business</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="potential" id="potential3" value="3" />
+            <label class="form-check-label" for="potential3">Opt for the cheaper option</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="potential" id="potential4" value="4" />
+            <label class="form-check-label" for="potential4">don't know</label>
+          </div>
+        </div>
+
+        <hr class="mx-4" />
+
+        <div class="card-body">
+          <h5 class="card-title">Brand Loyalty</h5>
+
+          <label>How long does a customer stay with you</label>
+          <br />
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="loyalty" id="loyalty1" value="1" />
+            <label class="form-check-label" for="loyalty1">once</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="loyalty" id="loyalty2" value="2" />
+            <label class="form-check-label" for="loyalty2">1 month</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="loyalty" id="loyalty3" value="3" />
+            <label class="form-check-label" for="loyalty3">6 months</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="loyalty" id="loyalty4" value="4" />
+            <label class="form-check-label" for="loyalty4">12 months</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="loyalty" id="loyalty5" value="5" />
+            <label class="form-check-label" for="loyalty5">5 years</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="loyalty" id="loyalty6" value="6" />
+            <label class="form-check-label" for="loyalty6">Forever</label>
+          </div>
+        </div>
       </div>
     </main>
 
