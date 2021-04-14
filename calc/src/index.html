@@ -11,7 +11,7 @@
 
   <body>
     <main id="main" class="container">
-      <div class="card">
+      <div class="card" x-data="form()">
         <div class="card-header">Brand Equity Calculator</div>
         <div class="card-body">
           <h5 class="card-title">Brand Awareness</h5>
@@ -20,10 +20,10 @@
           <input x-model.number="followersFB" type="number" class="form-control" name="followersFB" id="followersFB" placeholder="enter number" />
 
           <label for="followersInsta">How many Instagram Followers do you have?</label>
-          <input type="number" class="form-control" name="followersInsta" id="followersInsta" placeholder="enter number" />
+          <input x-model.number="followersInsta" type="number" class="form-control" name="followersInsta" id="followersInsta" placeholder="enter number" />
 
           <label for="followersLI">How many LinkedIn Followers do you have?</label>
-          <input type="number" class="form-control" name="followersLI" id="followersLI" placeholder="enter number" />
+          <input x-model.number="followersLI" type="number" class="form-control" name="followersLI" id="followersLI" placeholder="enter number" />
         </div>
 
         <hr class="mx-4" />
@@ -32,13 +32,13 @@
           <h5 class="card-title">Brand Association</h5>
 
           <label for="associated">Which business(es) are you associated with?</label>
-          <textarea class="form-control" name="associated" id="associated" placeholder="Your text here" rows="4"></textarea>
+          <textarea x-model.text="associated" class="form-control" name="associated" id="associated" placeholder="Your text here" rows="4"></textarea>
 
           <label for="associatedLeader">Which one is the leader/premium business?</label>
-          <input type="text" class="form-control" name="associatedLeader" id="associatedLeader" placeholder="Your text here" />
+          <input x-model.text="associatedLeader" type="text" class="form-control" name="associatedLeader" id="associatedLeader" placeholder="Your text here" />
 
           <label for="associatedFollowers">Collectively, how many followers do they have?</label>
-          <input type="number" class="form-control" name="associatedFollowers" id="associatedFollowers" placeholder="enter number" />
+          <input x-model.numbers="associatedFollowers" type="number" class="form-control" name="associatedFollowers" id="associatedFollowers" placeholder="enter number" />
         </div>
 
         <hr class="mx-4" />
@@ -46,22 +46,24 @@
         <div class="card-body">
           <h5 class="card-title">Perceived Quality</h5>
 
+          <p x-html="perceivedQuality"></p>
           <label for="perceivedQuality">How does your customer see your products/services?</label>
           <br />
+
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="perceivedQuality" id="perceivedQuality1" value="1" />
+            <input x-model="perceivedQuality" class="form-check-input" type="radio" name="perceivedQuality" id="perceivedQuality1" value="1" />
             <label class="form-check-label" for="perceivedQuality">below average</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="perceivedQuality" id="perceivedQuality2" value="2" />
+            <input x-model="perceivedQuality" class="form-check-input" type="radio" name="perceivedQuality" id="perceivedQuality2" value="2" />
             <label class="form-check-label" for="perceivedQuality">budget</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="perceivedQuality" id="perceivedQuality3" value="3" />
+            <input x-model="perceivedQuality" class="form-check-input" type="radio" name="perceivedQuality" id="perceivedQuality3" value="3" />
             <label class="form-check-label" for="perceivedQuality">above average</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="perceivedQuality" id="perceivedQuality4" value="4" />
+            <input x-model="perceivedQuality" class="form-check-input" type="radio" name="perceivedQuality" id="perceivedQuality4" value="4" />
             <label class="form-check-label" for="perceivedQuality">high end</label>
           </div>
         </div>
@@ -71,21 +73,23 @@
         <div class="card-body">
           <h5 class="card-title">Brand Experience</h5>
 
+          <p x-html="customerContact"></p>
+
           <label for="customerContact">When a customer contacts you, are they generally:</label>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="customerContact" id="customerContact1" value="1" />
+            <input x-model="customerContact" class="form-check-input" type="radio" name="customerContact" id="customerContact1" value="1" />
             <label class="form-check-label" for="customerContact2">contacting you to praise the service/product</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="customerContact" id="customerContact2" value="2" />
+            <input x-model="customerContact" class="form-check-input" type="radio" name="customerContact" id="customerContact2" value="2" />
             <label class="form-check-label" for="customerContact2">complaining that they are not getting the service/product they bought</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="customerContact" id="customerContact3" value="3" />
+            <input x-model="customerContact" class="form-check-input" type="radio" name="customerContact" id="customerContact3" value="3" />
             <label class="form-check-label" for="customerContact3">confused on how to utilise the product/service</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="customerContact" id="customerContact4" value="4" />
+            <input x-model="customerContact" class="form-check-input" type="radio" name="customerContact" id="customerContact4" value="4" />
             <label class="form-check-label" for="customerContact4">they never contact</label>
           </div>
         </div>
@@ -95,21 +99,23 @@
         <div class="card-body">
           <h5 class="card-title">Brand Preference</h5>
 
+          <span x-html="potential"></span>
+
           <label for="potential">Generally, when a potential customer goes to buy your product/service do they:</label>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="potential" id="potential1" value="1" />
+            <input x-model="potential" class="form-check-input" type="radio" name="potential" id="potential1" value="1" />
             <label class="form-check-label" for="potential1">Go with another supplier</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="potential" id="potential2" value="2" />
+            <input x-model="potential" class="form-check-input" type="radio" name="potential" id="potential2" value="2" />
             <label class="form-check-label" for="potential2">Select your business</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="potential" id="potential3" value="3" />
+            <input x-model="potential" class="form-check-input" type="radio" name="potential" id="potential3" value="3" />
             <label class="form-check-label" for="potential3">Opt for the cheaper option</label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="potential" id="potential4" value="4" />
+            <input x-model="potential" class="form-check-input" type="radio" name="potential" id="potential4" value="4" />
             <label class="form-check-label" for="potential4">don't know</label>
           </div>
         </div>
@@ -119,31 +125,44 @@
         <div class="card-body">
           <h5 class="card-title">Brand Loyalty</h5>
 
+          <span x-html="loyalty"></span>
+
           <label>How long does a customer stay with you</label>
           <br />
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="loyalty" id="loyalty1" value="1" />
+            <input x-model="loyalty" class="form-check-input" type="radio" name="loyalty" id="loyalty1" value="1" />
             <label class="form-check-label" for="loyalty1">once</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="loyalty" id="loyalty2" value="2" />
+            <input x-model="loyalty" class="form-check-input" type="radio" name="loyalty" id="loyalty2" value="2" />
             <label class="form-check-label" for="loyalty2">1 month</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="loyalty" id="loyalty3" value="3" />
+            <input x-model="loyalty" class="form-check-input" type="radio" name="loyalty" id="loyalty3" value="3" />
             <label class="form-check-label" for="loyalty3">6 months</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="loyalty" id="loyalty4" value="4" />
+            <input x-model="loyalty" class="form-check-input" type="radio" name="loyalty" id="loyalty4" value="4" />
             <label class="form-check-label" for="loyalty4">12 months</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="loyalty" id="loyalty5" value="5" />
+            <input x-model="loyalty" class="form-check-input" type="radio" name="loyalty" id="loyalty5" value="5" />
             <label class="form-check-label" for="loyalty5">5 years</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="loyalty" id="loyalty6" value="6" />
+            <input x-model="loyalty" class="form-check-input" type="radio" name="loyalty" id="loyalty6" value="6" />
             <label class="form-check-label" for="loyalty6">Forever</label>
+          </div>
+        </div>
+
+        <div class="card-body" x-model="doCalc()">
+          <div class="">progress bar thing</div>
+          <div class="dark">
+            <p>Your Brand Enquity Index is:</p>
+            <h2 x-html="scoreRaw"></h2>
+          </div>
+          <div>
+            <p>0 - 6: There are problems that need fixing 6 - 14: Needs Growing 14 - 18: Healthy and can improve 18+: Super healthy</p>
           </div>
         </div>
       </div>

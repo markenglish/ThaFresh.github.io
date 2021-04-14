@@ -10,32 +10,46 @@ input {
   direction: ltr;
 }
 
-h1, h2, h3, h4, h5 {
-	color: rgb(239,82,57);
-	font-family: $barlow;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: rgb(239, 82, 57);
+  font-family: $barlow;
 }
 
 h5 {
-	font-size: 34px;
-	font-weight: 400;
+  font-size: 34px;
+  font-weight: 400;
 }
 
 .card-header {
-	font-size: 34px;
-    font-family: 'Barlow';
+  font-size: 34px;
+  font-family: "Barlow";
 }
 
-input, label {
-	font-size: 16px;
-	font-weight: 300;	
+input,
+label {
+  font-size: 16px;
+  font-weight: 300;
 }
 
-input, textarea {
-    margin-bottom: 10px;
+input,
+textarea {
+  margin-bottom: 10px;
 }
 
 .form-check-inline {
-	input {
-		margin-bottom: 0px;
-	}
+  input {
+    margin-bottom: 0px;
+  }
+}
+
+.dark {
+  background: #6f6f6f;
+  p,
+  h2 {
+    color: white;
+  }
 }
