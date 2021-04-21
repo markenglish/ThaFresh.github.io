@@ -495,7 +495,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
   e.Modernizr = Modernizr;
 }(window, window, document);
-},{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{}],"D:/NodeModules/aha/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -523,7 +523,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "2761" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "4822" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -699,5 +699,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/vendor/modernizr-3.11.2.min.js"], null)
+},{}]},{},["D:/NodeModules/aha/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/vendor/modernizr-3.11.2.min.js"], null)
 //# sourceMappingURL=/modernizr-3.11.2.min.659b9f56.js.map
