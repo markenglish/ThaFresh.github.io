@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sketchfab Configurator</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div class="app">
+        <iframe src="" id="api-frame" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="vr" width="640"
+            height="400"></iframe>
+        <div class="options"></div>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://static.sketchfab.com/api/sketchfab-viewer-1.3.0.js"></script>
+<script type="text/javascript" src="./SketchfabConfigurator-1.0.6.js"></script>
+<script type="text/javascript">
+    var config = {
+    "model": "0116ca06626247cb8575eef442fd8db4",
+    "params": {
+        "camera": 0,
+        "preload": 1,
+        "ui_controls": 0,
+        "ui_infos": 0,
+        "ui_watermark": 0
+    },
+    "config": [
+        {
+            "name": "Pancreas",
+            "type": "visible",
+            "selector": "[instance=\"412\"]",
+            "default": true
+        },
+        {
+            "name": "Digestive tract",
+            "type": "visible",
+            "selector": "[instance=\"431\"]",
+            "default": true
+        },
+        {
+            "name": "Intestines",
+            "type": "visible",
+            "selector": "[instance=\"442\"]",
+            "default": true
+        },
+        {
+            "name": "Kidneys",
+            "type": "visible",
+            "selector": "[instance=\"453\"]",
+            "default": true
+        },
+        {
+            "name": "Organ_x",
+            "type": "visible",
+            "selector": "[instance=\"475\"]",
+            "default": true
+        }
+    ]
+};
+    var iframeEl = document.getElementById('api-frame');
+    var optionsEl = document.querySelector('.options');
+    var configurator = new SketchfabConfigurator.Configurator(iframeEl, optionsEl, config);
+</script>
+
+</html>
